@@ -1,0 +1,31 @@
+print "-"
+set datafile separator ","
+set xlabel "Time (h)"
+set ylabel "Absorbance (A.U.)"
+set yrange [-0.01:0.3]
+set term png
+set output  "gra_144_145_147.png"
+plot 'curva_144prom.csv' using 1:2:($1-$3):($1+$3):($1-$4):($1+$4) with xyerrorbars title "144", 'curva_145prom.csv' using 1:2:($1-$3):($1+$3):($1-$4):($1+$4) with xyerrorbars title "145", 'curva_147prom.csv' using 1:2:($1-$3):($1+$3):($1-$4):($1+$4) with xyerrorbars title "147"
+#Sigmoidal Fitting:
+FIT_LIMIT=1e-6
+f1(x)=a1*P01/(b1*P01+(a1-b1*P01)*exp(-a1*x))
+fit f1(x) 'curva_144prom.csv' using 1:2 via a1, b1, P01
+f2(x)=a2*P02/(b2*P02+(a2-b2*P02)*exp(-a2*x))
+fit f2(x) 'curva_145prom.csv' using 1:2 via a2, b2, P02
+f3(x)=a3*P03/(b3*P03+(a3-b3*P03)*exp(-a3*x))
+fit f3(x) 'curva_147prom.csv' using 1:2 via a3, b3, P03
+#SST = FIT_WSSR/(FIT_NDF+1)
+#SSE=FIT_WSSR/(FIT_NDF)
+#SSR=SST-SSE
+#R2=SSR/SST
+#print -R2
+set output  "curva144.png" 
+#plot 'curva_144.csv' using 3:4
+plot 'curva_144prom.csv' using 1:2:($1-$3):($1+$3):($1-$4):($1+$4) with xyerrorbars  title "Data 144", f1(x)  title "Fitting"
+set output  "curva145.png" 
+#plot 'curva_145.csv' using 3:4
+plot 'curva_145prom.csv' using 1:2:($1-$3):($1+$3):($1-$4):($1+$4) with xyerrorbars title "Data 145", f2(x)  title "Fitting"
+set output  "curva147.png" 
+#plot 'curva_147.csv' using 3:4
+plot 'curva_147prom.csv' using 1:2:($1-$3):($1+$3):($1-$4):($1+$4) with xyerrorbars title "Data 147", f3(x)  title "Fitting"
+#pause -1 "Hit any key to continue"

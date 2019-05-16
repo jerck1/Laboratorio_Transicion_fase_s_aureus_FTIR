@@ -35,6 +35,8 @@
 %%height=10in,a5paper,hmargin={3cm,0.8in},
 %]{geometry}
 \usepackage[version=4]{mhchem}%nombres compuestos quimicos
+\usepackage{textcomp}%Para angulos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 \preprint{APS/123-QED}
@@ -58,8 +60,8 @@ Universidad de los Andes\\
 \begin{center}
   \textit{Resumen}  
 \end{center}
-
-Se estudian cambios en la transición de fase sólido ordenado a líquido desordenado  en membranas modelo DMPC y en membranas de \textit{Staphyloccocus aureus} que tienen o no el carotenoide estafiloxantina. La transición de fase se estudia usando la técnica de espectrofotometría infrarroja por transformada de Fourier (FTIR) y se determina haciendo seguimiento del número de onda de la banda de absorción \ce{CH_{2}} de los ácidos grasos en función de la temperatura. Para la banda de absorción de DPPC no se encuentra un punto de inflexión en el centro de la temperatura de transición. Por otro lado, como se medirá el espectro para membranas de \textit{Staphylococcus aureus} se buscan los puntos óptimos de trabajo en las curvas de crecimiento, para la cepa nativa se encontró que es alrededor de 12 horas, sin embargo para las cepas que producen carotenoides en exceso y las que no lo producen los resultados no son concluyentes. Deben realizarse de nuevo sus curvas de crecimiento. Adicionalmente, se medirá el nivel de cooperatividad de la transición de fase mediante la  determinación del ancho de banda en la curva de la primera derivada.
+Se estudia la transici\'{o}n de fase s\'{o}lido ordenado a l\'{i}quido desordenado  en 1) membranas modelo DMPC, 2) en membranas de \textit{Staphyloccocus aureus} en presencia de estafiloxantina y 3) en ausencia de estafiloxantina. La transici\'{o}n de fase se estudia usando la t\'{e}cnica FTIR y se determina mediante el cambio termotr\'{o}pico del n\'{u}mero de onda de la banda de absorci\'{o}n \ce{CH_{2}} de los \'{a}cidos grasos. 1) Para membranas de DMPC se encuentra una temperatura de transici\'{o}n de $T_{1}=(22\pm2)$\textdegree C. Para membranas de \textit{Staphylococcus aureus} , primero se realizan curvas de crecimiento de tres cepas, una cepa nativa 2), una mutante que no produce estafiloxantina  3) y una  complementada que produce carotenoides. La cepa nativa 2), la mutante 3) y la complementada llegan a la fase estacionaria a $t_{n}=(22\pm2)$h, $ t_{m} =(22\pm2)$h y $ t_{c}= (22\pm2)$h respectivamente. De las cepas nativa y mutante se forman membranas con l\'{i}pidos y carotenoides y llevan al FTIR. Para las cepas nativa y mutante se obtiene una temperatura de transici\'{o}n de $T_{2}=(22\pm2)$\textdegree C y $T_{3}=(22\pm2)$\textdegree C respectivamente. Debido a la diferencia entre las dos temperaturas, existe cooperatividad en la transici\'{o}n de fase.
+%Se estudian cambios en la transici\'{o}n de fase s\'{o}lido ordenado a l\'{i}quido desordenado  en 1) membranas modelo DMPC y 2) en membranas de \textit{Staphyloccocus aureus} en presencia del carotenoide estafiloxantina y 3) membranas de \textit{Staphyloccocus aureus} en ausencia de estafiloxantina. La transici\'{o}n de fase se estudia usando la t\'{e}cnica de espectrofotometr\'{i}a infrarroja por transformada de Fourier (FTIR) y se determina mediante el aumento del n\'{u}mero de onda de la banda de absorci\'{o}n \ce{CH_{2}} de los \'{a}cidos grasos en funci\'{o}n de la temperatura. 1) Para membranas de DMPC preparadas y proporcionadas por el grupo de biof\'{i}sica de la Universidad de los Andes, se encuentra una temperatura de transici\'{o}n de $T_{1}=(22\pm2)$\textdegree C. Para las membranas de \textit{Staphylococcus aureus}, casos 2) y 3)  antes de medir los espectros se realizan curvas de crecimiento de \textit{Staphylococcus aureus} para tres cepas, una cepa nativa (caso 2)), una que es un mutante  del gen crtM de la ruta de s\'{i}ntesis de estafiloxantina (caso 3)) y una variante  complementada con pl\'{a}smido que contiene crtMN la cual produce un exceso de carotenoides. La cepa nativa 2), la mutante 3) y la complementada llegan a la fase estacionaria en los tiempos $(22\pm2)$h, $(22\pm2)$h y $(22\pm2)$h respectivamente. De las cepas nativa 2) y mutante 3) se extraen l\'{i}pidos y carotenoides, se forman membranas las cuales se llevan al FTIR para el seguimiento de la banda de \ce{CH_{2}} en funci\'{o}n de la temperatura. Para las cepas nativa 2) y mutante 3) se obtiene una temperatura de transici\'{o}n de $T_{2}=(22\pm2)$\textdegree C y $T_{3}=(22\pm2)$\textdegree C respectivamente. Debido a la diferencia entre las dos temperaturas, existe un nivel de cooperatividad de la transici\'{o}n de fase.
 \end{abstract}
 
 \keywords{}%Use showkeys class option if keyword
@@ -68,572 +70,153 @@ Se estudian cambios en la transición de fase sólido ordenado a líquido desord
 
 %\tableofcontents
 
-\section{\label{sec:level1}First-level heading:\protect\\ The line
-break was forced \lowercase{via} \textbackslash\textbackslash}
+\section{\label{sec:intro}Introducci\'{o}n y Estado del Arte}
+%\subsection{\textit{S. Aureus} y su Membrana}
+\textit{Staphylococcus aureus} es una bacteria pat\'{o}gena (que causa enfermedades infecciosas) tipo Gram-positiva,  la cual se encuentra en la microbiota humana sin producir enfermedades en condiciones normales, pero que en condiciones desfavorables tales como heridas y cicatrices operatorias puede causar o estar relacionada con enfermedades de diferente gravedad en el sistema respiratorio, en los tejidos blandos y en el torrente sangu\'{i}neo \cite{1HarpavatS.NissimS.LipppincottsMicrocards:MicrobiologyFlashCards2012.}.\\
+%\begin{figure}[h]
+ % \includegraphics[width=\linewidth]{s_aureus.jpg}
+  %\caption{Fotograf\'{i}a  de \textit{Staphylococcus aureus}. Tomado de \cite{1HarpavatS.NissimS.LipppincottsMicrocards:MicrobiologyFlashCards2012.}}
+%  \label{fig:sta}
+%\end{figure}
 
-This sample document demonstrates proper use of REV\TeX~4.2 (and
-\LaTeXe) in mansucripts prepared for submission to APS
-journals. Further information can be found in the REV\TeX~4.2
-documentation included in the distribution or available at
-\url{http://journals.aps.org/revtex/}.
+Desde el descubrimiento de \textit{S. aureus} como causante de una infecci\'{o}n a una herida en 1881 \cite{Orent2006AMagazine}, se ha investigado su presencia en otras infecciones y se han utilizado antibi\'{o}ticos como la penicilina y la meticilina para controlar estas infecciones \cite{1HarpavatS.NissimS.LipppincottsMicrocards:MicrobiologyFlashCards2012.}. Sin embargo \textit{S. aureus} ha desarrollado resistencia a estos antibi\'{o}ticos,  surgiendo la necesidad de buscar nuevos antibi\'{o}ticos, entre los cuales se encuentran los p\'{e}ptidos antimicrobianos.\\
+Los p\'{e}ptidos antimicrobianos interact\'{u}an con la membrana de la bacteria produciendo orificios que causan p\'{e}rdida de contenido y muerte celular. La resistencia a los poros. Para entender como puede generar resistencia a estos antibi\'{o}ticos es importante estudiar la rigidez mec\'{a}nica y la elasticidad de la membrana. Adicionalmente, se sabe que la composici\'{o}n de la bicapa lip\'{i}dica de la membrana de \textit{S. aureus} cambia de manera adaptativa al medio ambiente, volvi\'{e}ndose m\'{a}s resistente como respuesta a estr\'{e}s externo.\\
+\textit{S. aureus} al ser una bacteria Gram positiva tiene expuesto al exterior un compuesto llamado peptidoglicando. La membrana celular que recubre la bacteria es una bicapa fosfolip\'{i}dica que contiene dos capas de glicerofosfol\'{i}pidos. Los glicerofosfol\'{i}pidos son mol\'{e}culas anfip\'{a}ticas, las cuales tienen una parte hidrof\'{o}bica y otra parte hidrof\'{i}lica \cite{Nelson2011}, al ser anfip\'{a}ticas la parte interna de la bicapa es hidrof\'{o}bica mientras que la parte externa de la membrana es hidrof\'{i}lica. La interacci\'{o}n lateral entre estas mol\'{e}culas se da trav\'{e}s de fuerzas no covalentes lo que le confiere propiedades de cristal l\'{i}quido caracterizado por la capacidad de presentar transiciones de fase s\'{o}lido-l\'{i}quido. \\
+La membrana de \textit{S. aureus} est\'{a} compuesta principalmente por  fosfatidiletalonamina, cardiolipina, fosfatidilglicerol y estafiloxantina \cite{Ocampo2010TheAureus}, siendo la estafiloxantina un carotenoide que le da el color dorado (a\'{u}reo) caracter\'{i}stico de \textit{S. aureus}. Adem\'{a}s, dependiendo de la composici\'{o}n espec\'{i}fica de la membrana celular dicha membrana va a ser m\'{a}s o menos r\'{i}gida lo cual implica corrimientos en la temperatura de transici\'{o}n y cambios en la cooperatividad de la transici\'{o}n de fase. La estructura molecular de los fosfol\'{i}pidos presentes en la membrana hace que esta sea m\'{a}s fluida cuando la estructura presenta mol\'{e}culas con m\'{u}ltiples insaturaciones que inducen un incremento en espaciamiento, reduciendo la interacci\'{o}n entre ellas. La membrana puede pasar de un estado s\'{o}lido-ordenado (so) a un estado l\'{i}quido-desordenado (ld) con un incremento de temperatura. En el caso de \textit{S. aureus} se ha descubierto que su membrana cambia el estado de rigidez de su membrana modulando la cantidad de estafiloxantinas presentes y la cantidad de cardiolipinas. \\
+En cuanto a la fluidez de la membrana de acuerdo a la temperatura, si se estudia una membrana compuesta \'{u}nicamente por glicerofosfol\'{i}pidos, tal como se muestra en \cite{Heimburg}, esta presenta diferentes estados de acuerdo a su temperatura:  laminar l\'{i}quido cristalino, gel laminar, laminar ondulada, entre otras.
 
-When commands are referred to in this example file, they are always
-shown with their required arguments, using normal \TeX{} format. In
-this format, \verb+#1+, \verb+#2+, etc. stand for required
-author-supplied arguments to commands. For example, in
-\verb+\section{#1}+ the \verb+#1+ stands for the title text of the
-author's section heading, and in \verb+\title{#1}+ the \verb+#1+
-stands for the title text of the paper.
-
-Line breaks in section headings at all levels can be introduced using
-\textbackslash\textbackslash. A blank input line tells \TeX\ that the
-paragraph has ended. Note that top-level section headings are
-automatically uppercased. If a specific letter or word should appear in
-lowercase instead, you must escape it using \verb+\lowercase{#1}+ as
-in the word ``via'' above.
-
-\subsection{\label{sec:level2}Second-level heading: Formatting}
-
-This file may be formatted in either the \texttt{preprint} or
-\texttt{reprint} style. \texttt{reprint} format mimics final journal output. 
-Either format may be used for submission purposes. \texttt{letter} sized paper should
-be used when submitting to APS journals.
-
-\subsubsection{Wide text (A level-3 head)}
-The \texttt{widetext} environment will make the text the width of the
-full page, as on page~\pageref{eq:wideeq}. (Note the use the
-\verb+\pageref{#1}+ command to refer to the page number.) 
-\paragraph{Note (Fourth-level head is run in)}
-The width-changing commands only take effect in two-column formatting. 
-There is no effect if text is in a single column.
-
-\subsection{\label{sec:citeref}Citations and References}
-A citation in text uses the command \verb+\cite{#1}+ or
-\verb+\onlinecite{#1}+ and refers to an entry in the bibliography. 
-An entry in the bibliography is a reference to another document.
-
-\subsubsection{Citations}
-Because REV\TeX\ uses the \verb+natbib+ package of Patrick Daly, 
-the entire repertoire of commands in that package are available for your document;
-see the \verb+natbib+ documentation for further details. Please note that
-REV\TeX\ requires version 8.31a or later of \verb+natbib+.
-
-\paragraph{Syntax}
-The argument of \verb+\cite+ may be a single \emph{key}, 
-or may consist of a comma-separated list of keys.
-The citation \emph{key} may contain 
-letters, numbers, the dash (-) character, or the period (.) character. 
-New with natbib 8.3 is an extension to the syntax that allows for 
-a star (*) form and two optional arguments on the citation key itself.
-The syntax of the \verb+\cite+ command is thus (informally stated)
-\begin{quotation}\flushleft\leftskip1em
-\verb+\cite+ \verb+{+ \emph{key} \verb+}+, or\\
-\verb+\cite+ \verb+{+ \emph{optarg+key} \verb+}+, or\\
-\verb+\cite+ \verb+{+ \emph{optarg+key} \verb+,+ \emph{optarg+key}\ldots \verb+}+,
-\end{quotation}\noindent
-where \emph{optarg+key} signifies 
-\begin{quotation}\flushleft\leftskip1em
-\emph{key}, or\\
-\texttt{*}\emph{key}, or\\
-\texttt{[}\emph{pre}\texttt{]}\emph{key}, or\\
-\texttt{[}\emph{pre}\texttt{]}\texttt{[}\emph{post}\texttt{]}\emph{key}, or even\\
-\texttt{*}\texttt{[}\emph{pre}\texttt{]}\texttt{[}\emph{post}\texttt{]}\emph{key}.
-\end{quotation}\noindent
-where \emph{pre} and \emph{post} is whatever text you wish to place 
-at the beginning and end, respectively, of the bibliographic reference
-(see Ref.~[\onlinecite{witten2001}] and the two under Ref.~[\onlinecite{feyn54}]).
-(Keep in mind that no automatic space or punctuation is applied.)
-It is highly recommended that you put the entire \emph{pre} or \emph{post} portion 
-within its own set of braces, for example: 
-\verb+\cite+ \verb+{+ \texttt{[} \verb+{+\emph{text}\verb+}+\texttt{]}\emph{key}\verb+}+.
-The extra set of braces will keep \LaTeX\ out of trouble if your \emph{text} contains the comma (,) character.
-
-The star (*) modifier to the \emph{key} signifies that the reference is to be 
-merged with the previous reference into a single bibliographic entry, 
-a common idiom in APS and AIP articles (see below, Ref.~[\onlinecite{epr}]). 
-When references are merged in this way, they are separated by a semicolon instead of 
-the period (full stop) that would otherwise appear.
-
-\paragraph{Eliding repeated information}
-When a reference is merged, some of its fields may be elided: for example, 
-when the author matches that of the previous reference, it is omitted. 
-If both author and journal match, both are omitted.
-If the journal matches, but the author does not, the journal is replaced by \emph{ibid.},
-as exemplified by Ref.~[\onlinecite{epr}]. 
-These rules embody common editorial practice in APS and AIP journals and will only
-be in effect if the markup features of the APS and AIP Bib\TeX\ styles is employed.
-
-\paragraph{The options of the cite command itself}
-Please note that optional arguments to the \emph{key} change the reference in the bibliography, 
-not the citation in the body of the document. 
-For the latter, use the optional arguments of the \verb+\cite+ command itself:
-\verb+\cite+ \texttt{*}\allowbreak
-\texttt{[}\emph{pre-cite}\texttt{]}\allowbreak
-\texttt{[}\emph{post-cite}\texttt{]}\allowbreak
-\verb+{+\emph{key-list}\verb+}+.
-
-\subsubsection{Example citations}
-By default, citations are numerical\cite{Beutler1994}.
-Author-year citations are used when the journal is RMP. 
-To give a textual citation, use \verb+\onlinecite{#1}+: 
-Refs.~\onlinecite{[][{, and references therein}]witten2001,Bire82}. 
-By default, the \texttt{natbib} package automatically sorts your citations into numerical order and ``compresses'' runs of three or more consecutive numerical citations.
-REV\TeX\ provides the ability to automatically change the punctuation when switching between journal styles that provide citations in square brackets and those that use a superscript style instead. This is done through the \texttt{citeautoscript} option. For instance, the journal style \texttt{prb} automatically invokes this option because \textit{Physical 
-Review B} uses superscript-style citations. The effect is to move the punctuation, which normally comes after a citation in square brackets, to its proper position before the superscript. 
-To illustrate, we cite several together 
-\cite{[See the explanation of time travel in ]feyn54,*[The classical relativistic treatment of ][ is a relative classic]epr,witten2001,Berman1983,Davies1998,Bire82}, 
-and once again in different order (Refs.~\cite{epr,feyn54,Bire82,Berman1983,witten2001,Davies1998}). 
-Note that the citations were both compressed and sorted. Futhermore, running this sample file under the \texttt{prb} option will move the punctuation to the correct place.
-
-When the \verb+prb+ class option is used, the \verb+\cite{#1}+ command
-displays the reference's number as a superscript rather than in
-square brackets. Note that the location of the \verb+\cite{#1}+
-command should be adjusted for the reference style: the superscript
-references in \verb+prb+ style must appear after punctuation;
-otherwise the reference must appear before any punctuation. This
-sample was written for the regular (non-\texttt{prb}) citation style.
-The command \verb+\onlinecite{#1}+ in the \texttt{prb} style also
-displays the reference on the baseline.
-
-\subsubsection{References}
-A reference in the bibliography is specified by a \verb+\bibitem{#1}+ command
-with the same argument as the \verb+\cite{#1}+ command.
-\verb+\bibitem{#1}+ commands may be crafted by hand or, preferably,
-generated by Bib\TeX. 
-REV\TeX~4.2 includes Bib\TeX\ style files
-\verb+apsrev4-2.bst+, \verb+apsrmp4-2.bst+ appropriate for
-\textit{Physical Review} and \textit{Reviews of Modern Physics},
-respectively.
-
-\subsubsection{Example references}
-This sample file employs the \verb+\bibliography+ command, 
-which formats the \texttt{\jobname .bbl} file
-and specifies which bibliographic databases are to be used by Bib\TeX\ 
-(one of these should be by arXiv convention \texttt{\jobname .bib}).
-Running Bib\TeX\ (via \texttt{bibtex \jobname}) 
-after the first pass of \LaTeX\ produces the file
-\texttt{\jobname .bbl} which contains the automatically formatted
-\verb+\bibitem+ commands (including extra markup information via
-\verb+\bibinfo+ and \verb+\bibfield+ commands). 
-If not using Bib\TeX, you will have to create the \verb+thebibiliography+ environment 
-and its \verb+\bibitem+ commands by hand.
-
-Numerous examples of the use of the APS bibliographic entry types appear in the bibliography of this sample document.
-You can refer to the \texttt{\jobname .bib} file, 
-and compare its information to the formatted bibliography itself.
-
-\subsection{Footnotes}%
-Footnotes, produced using the \verb+\footnote{#1}+ command, 
-usually integrated into the bibliography alongside the other entries.
-Numerical citation styles do this%
-\footnote{Automatically placing footnotes into the bibliography requires using BibTeX to compile the bibliography.};
-author-year citation styles place the footnote at the bottom of the text column.
-Note: due to the method used to place footnotes in the bibliography, 
-\emph{you must re-run Bib\TeX\ every time you change any of your document's footnotes}. 
-
-\section{Math and Equations}
-Inline math may be typeset using the \verb+$+ delimiters. Bold math
-symbols may be achieved using the \verb+bm+ package and the
-\verb+\bm{#1}+ command it supplies. For instance, a bold $\alpha$ can
-be typeset as \verb+$\bm{\alpha}$+ giving $\bm{\alpha}$. Fraktur and
-Blackboard (or open face or double struck) characters should be
-typeset using the \verb+\mathfrak{#1}+ and \verb+\mathbb{#1}+ commands
-respectively. Both are supplied by the \texttt{amssymb} package. For
-example, \verb+$\mathbb{R}$+ gives $\mathbb{R}$ and
-\verb+$\mathfrak{G}$+ gives $\mathfrak{G}$
-
-In \LaTeX\ there are many different ways to display equations, and a
-few preferred ways are noted below. Displayed math will center by
-default. Use the class option \verb+fleqn+ to flush equations left.
-
-Below we have numbered single-line equations; this is the most common
-type of equation in \textit{Physical Review}:
-\begin{eqnarray}
-\chi_+(p)\alt{\bf [}2|{\bf p}|(|{\bf p}|+p_z){\bf ]}^{-1/2}
-\left(
-\begin{array}{c}
-|{\bf p}|+p_z\\
-px+ip_y
-\end{array}\right)\;,
-\\
-\left\{%
- \openone234567890abc123\alpha\beta\gamma\delta1234556\alpha\beta
- \frac{1\sum^{a}_{b}}{A^2}%
-\right\}%
-\label{eq:one}.
-\end{eqnarray}
-Note the open one in Eq.~(\ref{eq:one}).
-
-Not all numbered equations will fit within a narrow column this
-way. The equation number will move down automatically if it cannot fit
-on the same line with a one-line equation:
+Debido a la importancia de la rigidez de la membrana lip\'{i}dica en los procesos de defensa de la c\'{e}lula e incluso para la b\'{u}squeda de nuevos antibi\'{o}ticos, el objetivo principal es estudiar la transici\'{o}n de fase s\'{o}lido-ordenado/l\'{i}quido-desordenado de la membrana de S.aureus en presencia y ausencia de estafiloxantina con base en gr\'{a}ficas de posici\'{o}n de la banda CH$_{2}$ asim\'{e}trico en funci\'{o}n de la temperatura.\\
+Para enteder la transici\'{o}n de fase de una membrana en un sistema vivo, primero se estudia la transici\'{o}n fase en un sistema modelo compuesto por un solo tipo de l\'{i}pidos.
+\subsection{Transiciones de Fase en L\'{i}pidos}
+En soluci\'{o}n con agua, los l\'{i}pidos tienden a formar agregados debido a  su car\'{a}cter anfip\'{a}tico. Para concentraciones mucho mayores a cierta concentraci\'{o}n cr\'{i}tica \cite{Heimburg}, los l\'{i}pidos tienden a formar bicapas. Las fases de estas bicapas se conocen como fases laminares y seg\'{u}n su incremento en la temperatura se clasifican en:
+\begin{itemize}
+    \item \textit{Fase} $L_{c}$: Los l\'{i}pidos forman bicapas que presentan un orden en las tres dimensiones, es decir, las cabezas polares del l\'{i}pido presentan un patr\'{o}n en forma de red mientras que las cadenas apolares est\'{a}n ordenadas en configuraci\'{o}n  trans.
+    \item  \textit{Fase} $L_{\beta'}$: Esta es conocida como la fase gel. En esta los l\'{i}pidos se encuentran mayoriatariamente ordenados pero no todas cadenas hidrocarbonadas son trans. Se llama $\beta'$ porque algunos l\'{i}pidos presentan una inclinaci\'{o}n respecto al plano de la normal, \cite{Heimburg}.
+    \item  \textit{Fase} $P_{\beta '}$: Esta fase es una mezcla entre las fases de gel $L_{\beta '}$ y fluida $L_{\alpha}$. Se denomina as\'{i} porque la membrana presenta ondulaciones peri\'{o}dicas.
+      \item  \textit{Fase} $L_{\alpha}$: Esta es la fase l\'{i}quida o fluida de la membrana donde no hay un orden lateral de los grupos polares ni en las cadenas hidrocarbonadas.
+\end{itemize}
+Cuando ocurre una transici\'{o}n de fase de primer orden, la presi\'{o}n y la temperatura son aproximadamente constantes. El calor espec\'{i}fico a presi\'{o}n constante se calcula mediante la relaci\'{o}n:
 \begin{equation}
-\left\{
- ab12345678abc123456abcdef\alpha\beta\gamma\delta1234556\alpha\beta
- \frac{1\sum^{a}_{b}}{A^2}%
-\right\}.
-\end{equation}
-
-When the \verb+\label{#1}+ command is used [cf. input for
-Eq.~(\ref{eq:one})], the equation can be referred to in text without
-knowing the equation number that \TeX\ will assign to it. Just
-use \verb+\ref{#1}+, where \verb+#1+ is the same name that used in
-the \verb+\label{#1}+ command.
-
-Unnumbered single-line equations can be typeset
-using the \verb+\[+, \verb+\]+ format:
-\[g^+g^+ \rightarrow g^+g^+g^+g^+ \dots ~,~~q^+q^+\rightarrow
-q^+g^+g^+ \dots ~. \]
-
-
-\subsection{Multiline equations}
-
-Multiline equations are obtained by using the \verb+eqnarray+
-environment.  Use the \verb+\nonumber+ command at the end of each line
-to avoid assigning a number:
-\begin{eqnarray}
-{\cal M}=&&ig_Z^2(4E_1E_2)^{1/2}(l_i^2)^{-1}
-\delta_{\sigma_1,-\sigma_2}
-(g_{\sigma_2}^e)^2\chi_{-\sigma_2}(p_2)\nonumber\\
-&&\times
-[\epsilon_jl_i\epsilon_i]_{\sigma_1}\chi_{\sigma_1}(p_1),
-\end{eqnarray}
-\begin{eqnarray}
-\sum \vert M^{\text{viol}}_g \vert ^2&=&g^{2n-4}_S(Q^2)~N^{n-2}
-        (N^2-1)\nonumber \\
- & &\times \left( \sum_{i<j}\right)
-  \sum_{\text{perm}}
- \frac{1}{S_{12}}
- \frac{1}{S_{12}}
- \sum_\tau c^f_\tau~.
-\end{eqnarray}
-\textbf{Note:} Do not use \verb+\label{#1}+ on a line of a multiline
-equation if \verb+\nonumber+ is also used on that line. Incorrect
-cross-referencing will result. Notice the use \verb+\text{#1}+ for
-using a Roman font within a math environment.
-
-To set a multiline equation without \emph{any} equation
-numbers, use the \verb+\begin{eqnarray*}+,
-\verb+\end{eqnarray*}+ format:
-\begin{eqnarray*}
-\sum \vert M^{\text{viol}}_g \vert ^2&=&g^{2n-4}_S(Q^2)~N^{n-2}
-        (N^2-1)\\
- & &\times \left( \sum_{i<j}\right)
- \left(
-  \sum_{\text{perm}}\frac{1}{S_{12}S_{23}S_{n1}}
- \right)
- \frac{1}{S_{12}}~.
-\end{eqnarray*}
-
-To obtain numbers not normally produced by the automatic numbering,
-use the \verb+\tag{#1}+ command, where \verb+#1+ is the desired
-equation number. For example, to get an equation number of
-(\ref{eq:mynum}),
-\begin{equation}
-g^+g^+ \rightarrow g^+g^+g^+g^+ \dots ~,~~q^+q^+\rightarrow
-q^+g^+g^+ \dots ~. \tag{2.6$'$}\label{eq:mynum}
-\end{equation}
-
-\paragraph{A few notes on \texttt{tag}s} 
-\verb+\tag{#1}+ requires the \texttt{amsmath} package. 
-Place the \verb+\tag{#1}+ command before the \verb+\label{#1}+, if any. 
-The numbering produced by \verb+\tag{#1}+ \textit{does not affect} 
-the automatic numbering in REV\TeX; 
-therefore, the number must be known ahead of time, 
-and it must be manually adjusted if other equations are added. 
-\verb+\tag{#1}+ works with both single-line and multiline equations. 
-\verb+\tag{#1}+ should only be used in exceptional cases---%
-do not use it to number many equations in your paper. 
-Please note that this feature of the \texttt{amsmath} package
-is \emph{not} compatible with the \texttt{hyperref} (6.77u) package.
-
-Enclosing display math within
-\verb+\begin{subequations}+ and \verb+\end{subequations}+ will produce
-a set of equations that are labeled with letters, as shown in
-Eqs.~(\ref{subeq:1}) and (\ref{subeq:2}) below.
-You may include any number of single-line and multiline equations,
-although it is probably not a good idea to follow one display math
-directly after another.
-\begin{subequations}
-\label{eq:whole}
-\begin{eqnarray}
-{\cal M}=&&ig_Z^2(4E_1E_2)^{1/2}(l_i^2)^{-1}
-(g_{\sigma_2}^e)^2\chi_{-\sigma_2}(p_2)\nonumber\\
-&&\times
-[\epsilon_i]_{\sigma_1}\chi_{\sigma_1}(p_1).\label{subeq:2}
-\end{eqnarray}
-\begin{equation}
-\left\{
- abc123456abcdef\alpha\beta\gamma\delta1234556\alpha\beta
- \frac{1\sum^{a}_{b}}{A^2}
-\right\},\label{subeq:1}
-\end{equation}
-\end{subequations}
-Giving a \verb+\label{#1}+ command directly after the \verb+\begin{subequations}+, 
-allows you to reference all the equations in the \texttt{subequations} environment. 
-For example, the equations in the preceding subequations environment were
-Eqs.~(\ref{eq:whole}).
-
-\subsubsection{Wide equations}
-The equation that follows is set in a wide format, i.e., it spans the full page. 
-The wide format is reserved for long equations
-that cannot easily be set in a single column:
-\begin{widetext}
-\begin{equation}
-{\cal R}^{(\text{d})}=
- g_{\sigma_2}^e
- \left(
-   \frac{[\Gamma^Z(3,21)]_{\sigma_1}}{Q_{12}^2-M_W^2}
-  +\frac{[\Gamma^Z(13,2)]_{\sigma_1}}{Q_{13}^2-M_W^2}
- \right)
- + x_WQ_e
- \left(
-   \frac{[\Gamma^\gamma(3,21)]_{\sigma_1}}{Q_{12}^2-M_W^2}
-  +\frac{[\Gamma^\gamma(13,2)]_{\sigma_1}}{Q_{13}^2-M_W^2}
- \right)\;. 
- \label{eq:wideeq}
-\end{equation}
-\end{widetext}
-This is typed to show how the output appears in wide format.
-(Incidentally, since there is no blank line between the \texttt{equation} environment above 
-and the start of this paragraph, this paragraph is not indented.)
-
-\section{Cross-referencing}
-REV\TeX{} will automatically number such things as
-sections, footnotes, equations, figure captions, and table captions. 
-In order to reference them in text, use the
-\verb+\label{#1}+ and \verb+\ref{#1}+ commands. 
-To reference a particular page, use the \verb+\pageref{#1}+ command.
-
-The \verb+\label{#1}+ should appear 
-within the section heading, 
-within the footnote text, 
-within the equation, or 
-within the table or figure caption. 
-The \verb+\ref{#1}+ command
-is used in text at the point where the reference is to be displayed.  
-Some examples: Section~\ref{sec:level1} on page~\pageref{sec:level1},
-Table~\ref{tab:table1},%
-\begin{table}[b]%The best place to locate the table environment is directly after its first reference in text
-\caption{\label{tab:table1}%
-A table that fits into a single column of a two-column layout. 
-Note that REV\TeX~4 adjusts the intercolumn spacing so that the table fills the
-entire width of the column. Table captions are numbered
-automatically. 
-This table illustrates left-, center-, decimal- and right-aligned columns,
-along with the use of the \texttt{ruledtabular} environment which sets the 
-Scotch (double) rules above and below the alignment, per APS style.
-}
-\begin{ruledtabular}
-\begin{tabular}{lcdr}
-\textrm{Left\footnote{Note a.}}&
-\textrm{Centered\footnote{Note b.}}&
-\multicolumn{1}{c}{\textrm{Decimal}}&
-\textrm{Right}\\
-\colrule
-1 & 2 & 3.001 & 4\\
-10 & 20 & 30 & 40\\
-100 & 200 & 300.0 & 400\\
-\end{tabular}
-\end{ruledtabular}
-\end{table}
-and Fig.~\ref{fig:epsart}.%
-\begin{figure}[b]
-\includegraphics{fig_1}% Here is how to import EPS art
-\caption{\label{fig:epsart} A figure caption. The figure captions are
-automatically numbered.}
+    c_{p}=\left(\frac{\partial H}{\partial T}\right)_{P}
+\end{equation}\label{eq:1}
+Donde $H$ es la entalp\'{i}a del sistema, en este caso de la membrana bacteriana. Cuando ocurre la transici\'{o}n de fase, hay un salto de la entalp\'{i}a. Cuando hay un salto en la entalp\'{i}a, el calor espec\'{i}fico $c_{p}$ presenta un pico, como una funci\'{o}n tipo aguja.\\
+Para liposomas con un solo l\'{i}pido se encuentran mediante m\'{e}todos de calorimetr\'{i}a las curvas de calor espec\'{i}fico mostradas en la figura \ref{fig:esp3}. Los tres compuestos son dimiristoil fosfatidilcolina ( por sus siglas en ingl\'{e}s DMPC), dipalmitoilfosfatidilcolina ( por sus siglas en ingl\'{e}s DPPC) y diasteroilfosfatidilcolina ( por sus siglas en ingl\'{e}s DSPC).
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{cp.png}
+  \caption{ Calor espec\'{i}fico en funci\'{o}n de la temperatura para tres l\'{i}pidos diferentes. Los picos representan la transici\'{o}n de fase cada uno.Tomado de \cite{Heimburg}}.
+  \label{fig:esp3}
 \end{figure}
+ Como la composici\'{o}n de la bicapa fosfolip\'{i}dica de \textit{S. aureus} no contiene \'{u}nicamente el mismo tipo de fosfol\'{i}pidos, sino principalmente los que se han mencionado previamente, entonces no se espera obtener una transici\'{o}n de fase con un salto perfecto, sino que tenga un ancho de banda tal como se muestra en la figura \ref{fig:ent2}, para m\'{a}s detalles ver \cite{Ocampo2010TheAureus}.\\
+\begin{figure}[h]
+  \includegraphics[scale=0.3]{transicion.png}
+  \caption{ N\'{u}mero de onda de la banda de CH$_{2}$ en funci\'{o}n de la temperatura y su derivada para la membrana de \textit{S. aureus}. Imagen tomada de \cite{Ocampo2010TheAureus}.}
+  \label{fig:ent2}
+\end{figure}
+En la figura \ref{fig:ent2} cabe destacar que el n\'{u}mero de onda es directamente proporcional a la energ\'{i}a de vibraci\'{o}n de las mol\'{e}culas debido a la relaci\'{o}n $E=h\nu$ con $\nu$ la frecuencia de vibraci\'{o}n.\\
+La gr\'{a}fica \ref{fig:ent2} se obtuvo mediante la t\'{e}cnica de espectroscop\'{i}a de FITR variando la temperatura de la muestra.
+\subsection{Espectrofot\'{o}metro de transformada de Fourier en el infrarrojo (FTIR)}
+Es un instrumento basado en el interfer\'{o}metro de Michelson cuyo objetivo es medir el espectro de absorci\'{o}n y/o de emisi\'{o}n de una muestra en el infrarrojo. En el espectrofot\'{o}metro dos haces policrom\'{a}ticos  toman diferentes caminos \'{o}pticos. La diferencia de fases es una medida de la intensidad de luz que sale de la muestra. La idea de producir la diferencia de fases es que uno de los haces pase por la muestra. Se llama (IR) de rayos infrarrojos porque el barrido de longitudes de onda que hace el espectrofot\'{o}metro es sobre el infrarrojo.
+En la figura \ref{fig:FTIR} se muestra el esquema de un FTIR la cual se discute a continuaci\'{o}n.
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{FTIR.jpg}
+  \caption{Esquema de un FTIR. Figura tomada de \cite{Downes2010}.}
+  \label{fig:FTIR}
+\end{figure}
+\subsection{Curvas de Crecimiento}
+Con el fin de medir las transiciones de fase, se desea buscar el punto \'{o}ptimo en el cual la poblaci\'{o}n de c\'{e}lulas vivas sea mayor a la de c\'{e}lulas muertas y adem\'{a}s nos encontremos cerca del equilibrio poblacional.\\
+Desde el siglo XIX es bien conocido que una poblaci\'{o}n bacteriana sigue cuatro fases \cite{Unknowna} denominadas \textit{fase de adaptaci\'{o}n} (lag),  \textit{fase exponencial},  \textit{fase de estacionaria} y muerte celular o fase de decrecimiento logar\'{i}tmico. Las primeras tres fases se han modelado mediante la ecuaci\'{o}n log\'{i}stica \cite{Zill2009} que tiene en cuenta el crecimiento exponencial y la competencia. La soluci\'{o}n de la ecuaci\'{o}n log\'{i}stica en este caso es una curva sigmoidal de la forma:
+\begin{equation}
+    P(t)=\frac{aP_{0}}{bP_{0}+(a-bP_{0})e^{-at}},
+\end{equation}\label{eq:2}
+donde $P(\infty)=a/b$
+Una curva de crecimiento tiene la forma mostrada en la figura .
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{curva.png}
+  \caption{Fases de una curva de crecimiento en escala log. Las primeras tres fases se modelan como una sigmoidal. Figura tomada de \cite{Unknowna}.}
+  \label{fig:curv}
+\end{figure}
+\section{\label{sec:exp}Marco Experimental}
+Para estudiar la transici\'{o}n de fase s\'{o}lido-ordenado/l\'{i}quido-desordenado de la membrana de \textit{S. aureus} en presencia y ausencia de estafiloxantina se plantea obtener gr\'{a}ficas de posici\'{o}n de la banda CH$_{2}$ sim\'{e}trico en funci\'{o}n de la temperatura.
 
-\section{Floats: Figures, Tables, Videos, etc.}
-Figures and tables are usually allowed to ``float'', which means that their
-placement is determined by \LaTeX, while the document is being typeset. 
+\subsection{Curva de Crecimiento}
+Se toman tres cepas de \textit{S. aureus}, la nativa llamada
+144, una  que es un mutante (knockout) del gen crtM de la ruta
+de s\'{i}ntesis de estafiloxantina(no produce estafiloxantina) llamada 145 y una que mediante un pl\'{a}smido con el gen crtM produce un exceso de carotenoides,llamada 147. A las tres cepas se les realiza una curva de crecimiento. Esto se realiza con el fin de conocer cual es la fase estacionaria
+de la curva que va a ser el punto \'{o}ptimo de trabajo.\\
 
-Use the \texttt{figure} environment for a figure, the \texttt{table} environment for a table.
-In each case, use the \verb+\caption+ command within to give the text of the
-figure or table caption along with the \verb+\label+ command to provide
-a key for referring to this figure or table.
-The typical content of a figure is an image of some kind; 
-that of a table is an alignment.%
-\begin{figure*}
-\includegraphics{fig_2}% Here is how to import EPS art
-\caption{\label{fig:wide}Use the figure* environment to get a wide
-figure that spans the page in \texttt{twocolumn} formatting.}
-\end{figure*}
-\begin{table*}
-\caption{\label{tab:table3}This is a wide table that spans the full page
-width in a two-column layout. It is formatted using the
-\texttt{table*} environment. It also demonstates the use of
-\textbackslash\texttt{multicolumn} in rows with entries that span
-more than one column.}
-\begin{ruledtabular}
-\begin{tabular}{ccccc}
- &\multicolumn{2}{c}{$D_{4h}^1$}&\multicolumn{2}{c}{$D_{4h}^5$}\\
- Ion&1st alternative&2nd alternative&lst alternative
-&2nd alternative\\ \hline
- K&$(2e)+(2f)$&$(4i)$ &$(2c)+(2d)$&$(4f)$ \\
- Mn&$(2g)$\footnote{The $z$ parameter of these positions is $z\sim\frac{1}{4}$.}
- &$(a)+(b)+(c)+(d)$&$(4e)$&$(2a)+(2b)$\\
- Cl&$(a)+(b)+(c)+(d)$&$(2g)$\footnotemark[1]
- &$(4e)^{\text{a}}$\\
- He&$(8r)^{\text{a}}$&$(4j)^{\text{a}}$&$(4g)^{\text{a}}$\\
- Ag& &$(4k)^{\text{a}}$& &$(4h)^{\text{a}}$\\
-\end{tabular}
-\end{ruledtabular}
-\end{table*}
+Para dicha tarea se recuperan las c\'{e}lulas que est\'{a}n a -80\textdegree C, es decir, se toma una colonia y se cultivan en cajas Petri que contienen LB-agar, figura \ref{fig:curv1} paso 1). Como la 147 tiene el pl\'{a}smido al LB-agar debe agreg\'{a}rsele 1$\mu$g/$m$L del antibi\'{o}tico eritromicina para que el pl\'{a}smido quede dentro de la bacteria. El valor de la concentraci\'{o}n \'{o}ptima de eritromicina se determin\'{o} mediante un experimento previo, ver figura \ref{fig:144_eri} y documento del avance. En dicho experimento se realizan curvas de crecimiento de la cepas 144  y 147 encontr\'{a}ndose que a partir de 1$\mu$g/$m$L de eritromicina hay crecimiento de las cepas.\\
 
-Insert an image using either the \texttt{graphics} or
-\texttt{graphix} packages, which define the \verb+\includegraphics{#1}+ command.
-(The two packages differ in respect of the optional arguments 
-used to specify the orientation, scaling, and translation of the image.) 
-To create an alignment, use the \texttt{tabular} environment. 
+Luego se toma una colonia de cada caja Petri, se diluye en 10mL de LB l\'{i}quido y se deja en overnight dentro del agitador ``Shaker'' a  37\textdegree C, ver figura \ref{fig:curv1} paso 3).\\
 
-The best place to locate the \texttt{figure} or \texttt{table} environment
-is immediately following its first reference in text; this sample document
-illustrates this practice for Fig.~\ref{fig:epsart}, which
-shows a figure that is small enough to fit in a single column. 
-
-In exceptional cases, you will need to move the float earlier in the document, as was done
-with Table~\ref{tab:table3}: \LaTeX's float placement algorithms need to know
-about a full-page-width float earlier. 
-
-Fig.~\ref{fig:wide}
-has content that is too wide for a single column,
-so the \texttt{figure*} environment has been used.%
-\begin{table}[b]
-\caption{\label{tab:table4}%
-Numbers in columns Three--Five are aligned with the ``d'' column specifier 
-(requires the \texttt{dcolumn} package). 
-Non-numeric entries (those entries without a ``.'') in a ``d'' column are aligned on the decimal point. 
-Use the ``D'' specifier for more complex layouts. }
-\begin{ruledtabular}
-\begin{tabular}{ccddd}
-One&Two&
-\multicolumn{1}{c}{\textrm{Three}}&
-\multicolumn{1}{c}{\textrm{Four}}&
-\multicolumn{1}{c}{\textrm{Five}}\\
-%\mbox{Three}&\mbox{Four}&\mbox{Five}\\
-\hline
-one&two&\mbox{three}&\mbox{four}&\mbox{five}\\
-He&2& 2.77234 & 45672. & 0.69 \\
-C\footnote{Some tables require footnotes.}
-  &C\footnote{Some tables need more than one footnote.}
-  & 12537.64 & 37.66345 & 86.37 \\
-\end{tabular}
-\end{ruledtabular}
-\end{table}
-
-The content of a table is typically a \texttt{tabular} environment, 
-giving rows of type in aligned columns. 
-Column entries separated by \verb+&+'s, and 
-each row ends with \textbackslash\textbackslash. 
-The required argument for the \texttt{tabular} environment
-specifies how data are aligned in the columns. 
-For instance, entries may be centered, left-justified, right-justified, aligned on a decimal
-point. 
-Extra column-spacing may be be specified as well, 
-although REV\TeX~4 sets this spacing so that the columns fill the width of the
-table. Horizontal rules are typeset using the \verb+\hline+
-command. The doubled (or Scotch) rules that appear at the top and
-bottom of a table can be achieved enclosing the \texttt{tabular}
-environment within a \texttt{ruledtabular} environment. Rows whose
-columns span multiple columns can be typeset using the
-\verb+\multicolumn{#1}{#2}{#3}+ command (for example, see the first
-row of Table~\ref{tab:table3}).%
-
-Tables~\ref{tab:table1}, \ref{tab:table3}, \ref{tab:table4}, and \ref{tab:table2}%
-\begin{table}[b]
-\caption{\label{tab:table2}
-A table with numerous columns that still fits into a single column. 
-Here, several entries share the same footnote. 
-Inspect the \LaTeX\ input for this table to see exactly how it is done.}
-\begin{ruledtabular}
-\begin{tabular}{cccccccc}
- &$r_c$ (\AA)&$r_0$ (\AA)&$\kappa r_0$&
- &$r_c$ (\AA) &$r_0$ (\AA)&$\kappa r_0$\\
-\hline
-Cu& 0.800 & 14.10 & 2.550 &Sn\footnotemark[1]
-& 0.680 & 1.870 & 3.700 \\
-Ag& 0.990 & 15.90 & 2.710 &Pb\footnotemark[2]
-& 0.450 & 1.930 & 3.760 \\
-Au& 1.150 & 15.90 & 2.710 &Ca\footnotemark[3]
-& 0.750 & 2.170 & 3.560 \\
-Mg& 0.490 & 17.60 & 3.200 &Sr\footnotemark[4]
-& 0.900 & 2.370 & 3.720 \\
-Zn& 0.300 & 15.20 & 2.970 &Li\footnotemark[2]
-& 0.380 & 1.730 & 2.830 \\
-Cd& 0.530 & 17.10 & 3.160 &Na\footnotemark[5]
-& 0.760 & 2.110 & 3.120 \\
-Hg& 0.550 & 17.80 & 3.220 &K\footnotemark[5]
-&  1.120 & 2.620 & 3.480 \\
-Al& 0.230 & 15.80 & 3.240 &Rb\footnotemark[3]
-& 1.330 & 2.800 & 3.590 \\
-Ga& 0.310 & 16.70 & 3.330 &Cs\footnotemark[4]
-& 1.420 & 3.030 & 3.740 \\
-In& 0.460 & 18.40 & 3.500 &Ba\footnotemark[5]
-& 0.960 & 2.460 & 3.780 \\
-Tl& 0.480 & 18.90 & 3.550 & & & & \\
-\end{tabular}
-\end{ruledtabular}
-\footnotetext[1]{Here's the first, from Ref.~\onlinecite{feyn54}.}
-\footnotetext[2]{Here's the second.}
-\footnotetext[3]{Here's the third.}
-\footnotetext[4]{Here's the fourth.}
-\footnotetext[5]{And etc.}
-\end{table}
-show various effects.
-A table that fits in a single column employs the \texttt{table}
-environment. 
-Table~\ref{tab:table3} is a wide table, set with the \texttt{table*} environment. 
-Long tables may need to break across pages. 
-The most straightforward way to accomplish this is to specify
-the \verb+[H]+ float placement on the \texttt{table} or
-\texttt{table*} environment. 
-However, the \LaTeXe\ package \texttt{longtable} allows headers and footers to be specified for each page of the table. 
-A simple example of the use of \texttt{longtable} can be found
-in the file \texttt{summary.tex} that is included with the REV\TeX~4
-distribution.
-
-There are two methods for setting footnotes within a table (these
-footnotes will be displayed directly below the table rather than at
-the bottom of the page or in the bibliography). The easiest
-and preferred method is just to use the \verb+\footnote{#1}+
-command. This will automatically enumerate the footnotes with
-lowercase roman letters. However, it is sometimes necessary to have
-multiple entries in the table share the same footnote. In this case,
-there is no choice but to manually create the footnotes using
-\verb+\footnotemark[#1]+ and \verb+\footnotetext[#1]{#2}+.
-\texttt{\#1} is a numeric value. Each time the same value for
-\texttt{\#1} is used, the same mark is produced in the table. The
-\verb+\footnotetext[#1]{#2}+ commands are placed after the \texttt{tabular}
-environment. Examine the \LaTeX\ source and output for
-Tables~\ref{tab:table1} and \ref{tab:table2}
-for examples.
-
-Video~\ref{vid:PRSTPER.4.010101} 
-illustrates several features new with REV\TeX4.2,
-starting with the \texttt{video} environment, which is in the same category with
-\texttt{figure} and \texttt{table}.%
-\begin{video}
-\href{http://prst-per.aps.org/multimedia/PRSTPER/v4/i1/e010101/e010101_vid1a.mpg}{\includegraphics{vid_1a}}%
- \quad
-\href{http://prst-per.aps.org/multimedia/PRSTPER/v4/i1/e010101/e010101_vid1b.mpg}{\includegraphics{vid_1b}}
- \setfloatlink{http://link.aps.org/multimedia/PRSTPER/v4/i1/e010101}%
- \caption{\label{vid:PRSTPER.4.010101}%
-  Students explain their initial idea about Newton's third law to a teaching assistant. 
-  Clip (a): same force.
-  Clip (b): move backwards.
- }%
-\end{video}
-The \verb+\setfloatlink+ command causes the title of the video to be a hyperlink to the
-indicated URL; it may be used with any environment that takes the \verb+\caption+
-command.
-The \verb+\href+ command has the same significance as it does in the context of
-the \texttt{hyperref} package: the second argument is a piece of text to be 
-typeset in your document; the first is its hyperlink, a URL.
-
-\textit{Physical Review} style requires that the initial citation of
-figures or tables be in numerical order in text, so don't cite
-Fig.~\ref{fig:wide} until Fig.~\ref{fig:epsart} has been cited.
+ Al tomar una gota de la diluci\'{o}n dejada en overnight, se puede conocer el n\'{u}mero de c\'{e}lulas contenidas en la gota usando el nanodrop o un espectrofot\'{o}metro, el n\'{u}mero de c\'{e}lulas ser\'{a} proporcional a la absorbancia, \ref{fig:curv1} paso 4).\\
+\begin{figure}
+ \input{./Imagenes/esquema1.pdf_tex}
+  \input{./Imagenes/nanodrop.pdf_tex}
+  \caption{Pasos para realizar una curva de crecimiento. 1) Recuperaci\'{o}n de c\'{e}lulas a cajas petri con LB. 2) Diluci\'{o}n colonia a LB l\'{i}quido. 3) Frasco diluido a Shaker 4) Medici\'{o}n de absorbancia con nanodrop. }
+  \label{fig:curv1}
+\end{figure}
+\begin{figure}[h]
+\includegraphics[scale=0.04]{./Imagenes/144_eri.jpg}
+  \caption{Crecimiento de la cepa 144 con diferentes concentraciones de  eritromicina. De derecha a izquierda 0.4$\mu$g/mL, 0.8$\mu$g/mL, 1$\mu$g/mL y 1.2$\mu$g/mL de  eritromicina.}
+  \label{fig:144_eri}
+\end{figure}
+ \subsection{Espectro FTIR}
+Antes de trabajar con un sistema \textit{in vivo} se miden los espectros para liposomas hechos de  DMPC (dimiristoil fosfatidilcolina) en funci\'{o}n de la temperatura, esto en parte para verificar el funcionamiento del control de temperatura y en parte como comparaci\'{o}n del sistema modelo al vivo. El control de temperatura tiene un encapsulado cuyo interior tiene una l\'{a}mina de Cu que calienta la muestra y vidrios de Ge transparentes al infrarrojo. En el centro de las dos l\'{a}minas de Ge se coloca la muestra.  La temperatura se variar\'{a} por debajo de la temperatura ambiente (aproximadamente desde 10\textdegree C) y por encima de la temperatura ambiente ( abajo de 40\textdegree C aproximadamente) en pasos de a 5 \textdegree C cada minuto, ver \cite{Ocampo2010TheAureus}. Para tomar el espectro por cada temperatura se acopla el control de temperatura al FTIR, tal como se ilustra en la figura \ref{fig:mont2}.\\
+\begin{figure}
+ \input{./Imagenes/esquema2.pdf_tex}
+  \caption{Esquema del control de temperatura acoplado al FTIR usado para medir el espectro en funci\'{o}n de la temperatura.}
+  \label{fig:mont2}
+\end{figure}
+Una vez trabajado los liposomas de DPPC\footnote{Liposomas proporcionados por el grupo de biof\'{i}sica}, se mide el espectro de las tres cepas 144, 145 y 147. Para esto, debe tenerse en cuenta la curva de crecimiento. Con la curva se establece el punto de crecimiento \'{o}ptimo de las c\'{e}lulas a trabajar. Una vez escogido este punto, se coloca una muestra de \textit{S. aureus} en el interior del control de temperatura \footnote{Mediciones realizadas con la colaboraci\'{o}n del grupo de qu\'{i}mica arom\'{a}tica de la universidad},  y se miden los espectros para cada temperatura tal como se describi\'{o} antes.
+Se busca en la curva del espectro de absorbancia el pico correspondiente a la vibraci\'{o}n asim\'{e}trica de CH$_{2}$ el cual est\'{a} alrededor de $2853 \mathrm{cm}^{-1}$ y se mide el valor del n\'{u}mero de onda de este pico en funci\'{o}n de la temperatura. La temperatura es el par\'{a}metro controlable mediante la interfaz que conecta al computador.
+\section{Resultados Preliminares y An\'alisis}
+Las curvas de crecimiento obtenidas para las cepas 144 y 145 son las mostradas en la gr\'{a}fica \ref{fig:cur1}. Las densidades \'{o}pticas en funci\'{o}n del tiempo para la 144 y la 145 (d\'{i}a 1) son la verde y la roja respectivamente; estas fueron tomadas hasta que se visualizara un cambio de concavidad en las curvas, lo cual ocurri\'{o} alrededor de las 12 horas. Los puntos m\'{a}s altos que est\'{a}n al inicio representan los valores de la densidad \'{o}ptica del overnight. Se espera que las curvas alcancen este valor de la densidad \'{o}ptica cuando lleguen a la fase estacionaria. La curva de la cepa 147 se intent\'{o} realizar pero no creci\'{o}.\\
+\begin{figure}[h]
+ \includegraphics[width=\linewidth]{curvas/gratodas.png}
+  \caption{Curvas de crecimiento para las cepas 144 y 145}
+  \label{fig:cur1}
+\end{figure}
+ A pesar de que la cepa 145 se cultiv\'{o} en cloranfenicol, se esperaba que esta tuviera un tiempo de adaptaci\'{o}n (lag phase) m\'{a}s prolongado que el de la 144 ya que la cepa 145 no produce carotenoides. Con base en esto, se decide tomar nuevamente los datos de la curva 145, representada en la gr\'{a}fica  \ref{fig:cur1} como 145 (d\'{i}a 2) en azul. Se observa que la 145 (d\'{i}a 2) tiene un tiempo de adaptaci\'{o}n m\'{a}s prolongado que la 145 (d\'{i}a 1) y en general que su curva de crecimiento es menor a las otras dos.\\
+ 
+ Para las cepa 144, 145 (d\'{i}a 1) y 145 (d\'{i}a 2) se realiza un ajuste a la sigmoidal \eqref{eq:2}\\
+ Para la 144 se encontr\'{o} un coeficiente de determinaci\'{o}n de $r^2=0.784$. Los valores $a$, $b$ y $P_{0}$ de la sigmoidal ajustados se discutir\'{a}n en la en informe final.
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{curvas/gra144.png}
+  \caption{Curva de crecimiento para las cepas 144, 145 y 147}
+  \label{fig:cur2}
+   Para la 145  (d\'{i}a 1) se encontr\'{o} un coeficiente de determinaci\'{o}n de $r^2=0.994$.
+   Los valores $a$, $b$ y $P_{0}$ de la sigmoidal ajustados se discutir\'{a}n en la en informe final.
+\end{figure}
+\begin{figure}[h]
+ \includegraphics[width=\linewidth]{curvas/gra145dia1.png}
+  \caption{Curvas de crecimiento para las cepas 144, 145 y 147}
+  \label{fig:cur3}
+\end{figure}
+ Para la 145  (d\'{i}a 2) se encontr\'{o} un coeficiente de determinaci\'{o}n de $r^2=0.955$. 
+ Los valores $a$, $b$ y $P_{0}$ de la sigmoidal ajustados se discutir\'{a}n en la en informe final.
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{curvas/gra145dia2.png}
+  \caption{Curvas de crecimiento para las cepas 144, 145 y 147}
+  \label{fig:cur4}
+\end{figure}
+Debido a que la cepa 147 no creci\'{o} en antibi\'{o}tico se realiza otro experimento en el cual crece \textit{S. aureus} cepas 144 y 147 diluidas en LB a diferentes concentraciones de antibi\'{o}tico, esto con el fin de determinar la concentraci\'{o}n adecudad de antib\'{o}tico suministrado a la 147. Se preparan 5 frascos con c\'{e}lulas 144, 5 con 147 y a cada frasco se le agregan diferentes concentraciones de eritromicina 0.4$\mu$g/mL, 0.8$\mu$g/mL, 1$\mu$g/mL, 1.2$\mu$g/mL y 1.4$\mu$g/mL y se dejan en el agitador (shaker) entre 4 y 6 horas \footnote{Este experimento fue realizado por el equipo del laboratorio de biof\'{i}sica}\\
+Los resultados obtenidos para el experimento fueron los mostrados en la figura \\
+De la figura \ref{fig:144_eri} se puede concluir que la concentraci\'{o}n de eritromicina m\'{a}s adecuada para crecer la cepa 147 es de 1$\mu$g/mL.
+\subsection{Espectro en funci\'{o}n de la Temperatura}
+Para bicapas compuestas por DPPC se obtienen los espectros a 13\textdegree C, 17\textdegree C, 20\textdegree C, 25\textdegree C, 30\textdegree C y 35\textdegree C mostrados en el anexo. En la figura \ref{fig:espa13} se muestran los dos valles de inter\'{e}s para $T=13$\textdegree C.
+\begin{figure}[h]
+\includegraphics[scale=0.3]{FTIR/13C.pdf}
+  \caption{Regi\'{o}n del espectro de absorci\'{o}n para DPPC entre 2780 cm $^{-1}$ y 3000 cm $^{-1}$ a $T=13$\textdegree C.}
+  \label{fig:espa13}
+\end{figure}
+Con el fin de conocer los valores experimentales de estos valles (que en adelante los llamaremos picos si consideramos el inverso del espectro de absorci\'{o}n) primero se calcula el inverso multiplicativo del espectro y luego se hallan mediante el m\'{e}todo de la segunda derivada en $Qtiplot$. En la tabla 1 se muestran los valores y las posiciones de los picos encontrados para las 6 temperaturas:
+\input{FTIR/picos.tex}
+De la tabla se observa que aunque hay un aumento en la temperatura de 20\textdegree C a 25\textdegree C tambi\'{e}n existe esta variaci\'{o}n al pasar de 13\textdegree C a 17\textdegree C. Estas variaciones pueden deberse a  que el espectro presenta unas interferencias que pueden modificar los picos, estas son las ondulaciones mostradas en la gr\'{a}fica \ref{fig:espa13}. Las interferencias son causadas por sitio dende se coloca la muestra en el control de temperatura.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusiones y Trabajo Futuro Documento}
+De las gr\'{a}ficas para las curvas de crecimiento \ref{fig:cur1} se encuentra que a pesar de que los tiempos de crecimiento para la 145 no son los esperados, tanto para la 144 como para la 145 se observa un crecimiento con la forma de una curva sigmoidal.\\
+Debido a que la cepa 147 no mostr\'{o} crecimiento bajo las condiciones dadas en el marco experimental y a que la cepa 145 mostr\'{o} diferencias para los dos d\'{i}as, se realizar\'{a}n nuevamente las curvas de crecimiento para todas las cepas teniendo en cuenta que la concentraci\'{o}n de eritromicina que se suministrar\'{a} a las cepas 145 y 147 ser\'{a} de 1$\mu$g/mL.\\
+En cuanto a los espectros aunque se observa un aumento en el n\'{u}mero de onda contra la temperatura no se puede distinguir claramente la transici\'{o}n de fase de los liposomas hechos de DPPC. Se ha trabajado en disminuir la interferencia para encontrar encontrar el aumento abrupto en los picos alrededor de $23-24$ \textdegree C y se ya se ha disminuido la interferencia (resultados no mostrados aqu\'{i}). Como ya se logr\'{o} disminuir la intererencia se pasar\'{a} a medir los espectros en funci\'{o}n de la temperatura para las cepas 144, 145 y 147 de \textit{S. aureus} vivas.\\
 
 \begin{acknowledgments}
 We wish to acknowledge the support of the author community in using
@@ -642,68 +225,45 @@ REV\TeX{}, offering suggestions and encouragement, testing new versions,
 \end{acknowledgments}
 
 \appendix
-
-\section{Appendixes}
-
-To start the appendixes, use the \verb+\appendix+ command.
-This signals that all following section commands refer to appendixes
-instead of regular sections. Therefore, the \verb+\appendix+ command
-should be used only once---to setup the section commands to act as
-appendixes. Thereafter normal section commands are used. The heading
-for a section can be left empty. For example,
-\begin{verbatim}
-\appendix
-\section{}
-\end{verbatim}
-will produce an appendix heading that says ``APPENDIX A'' and
-\begin{verbatim}
-\appendix
-\section{Background}
-\end{verbatim}
-will produce an appendix heading that says ``APPENDIX A: BACKGROUND''
-(note that the colon is set automatically).
-
-If there is only one appendix, then the letter ``A'' should not
-appear. This is suppressed by using the star version of the appendix
-command (\verb+\appendix*+ in the place of \verb+\appendix+).
-
-\section{A little more on appendixes}
-
-Observe that this appendix was started by using
-\begin{verbatim}
-\section{A little more on appendixes}
-\end{verbatim}
-
-Note the equation number in an appendix:
-\begin{equation}
-E=mc^2.
-\end{equation}
-
-\subsection{\label{app:subsec}A subsection in an appendix}
-
-You can use a subsection or subsubsection in an appendix. Note the
-numbering: we are now in Appendix~\ref{app:subsec}.
-
-Note the equation numbers in this appendix, produced with the
-subequations environment:
-\begin{subequations}
-\begin{eqnarray}
-E&=&mc, \label{appa}
-\\
-E&=&mc^2, \label{appb}
-\\
-E&\agt& mc^3. \label{appc}
-\end{eqnarray}
-\end{subequations}
-They turn out to be Eqs.~(\ref{appa}), (\ref{appb}), and (\ref{appc}).
+\section*{Anexo: Espectros obtenidos por FTIR para membranas de DPPC}
+\begin{figure}[ht]
+\includegraphics[scale=0.2]{FTIR/Graph1.pdf}
+  \caption{Espectro de absorci\'{o}n para DPPC entre 1000 cm $^{-1}$ y 3300 cm $^{-1}$ a $T=13$\textdegree C.}
+  \label{fig:13}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.25]{FTIR/17C.pdf}
+  \caption{Regi\'{o}n del espectro de absorci\'{o}n para DPPC entre 2780 cm $^{-1}$ y 3000 cm $^{-1}$ a $T=17$\textdegree C.}
+  \label{fig:espa17}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.25]{FTIR/20C.pdf}
+  \caption{Regi\'{o}n del espectro de absorci\'{o}n para DPPC entre 2780 cm $^{-1}$ y 3000 cm $^{-1}$ a $T=20$\textdegree C.}
+  \label{fig:espa20}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.25]{FTIR/25C.pdf}
+  \caption{Regi\'{o}n del espectro de absorci\'{o}n para DPPC entre 2780 cm $^{-1}$ y 3000 cm $^{-1}$ a $T=25$\textdegree C.}
+  \label{fig:espa25}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.25]{FTIR/30C.pdf}
+  \caption{Regi\'{o}n del espectro de absorci\'{o}n para DPPC entre 2780 cm $^{-1}$ y 3000 cm $^{-1}$ a $T=30$\textdegree C.}
+  \label{fig:espa30}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[scale=0.25]{FTIR/35C.pdf}
+  \caption{Regi\'{o}n del espectro de absorci\'{o}n para DPPC entre 2780 cm $^{-1}$ y 3000 cm $^{-1}$ a $T=35$\textdegree C.}
+  \label{fig:espa35}
+\end{figure}
 
 % The \nocite command causes all entries in a bibliography to be printed out
 % whether or not they are actually referenced in the text. This is appropriate
 % for the sample file to show the different styles of references, but authors
-% most likely will not want to use it.
-\nocite{*}
+% most likely will not want to use it:
+%\nocite{*}
 
-\bibliography{apssamp}% Produces the bibliography via BibTeX.
+\bibliography{references}% Produces the bibliography via BibTeX.
 
 \end{document}
 %
